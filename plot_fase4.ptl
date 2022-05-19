@@ -1,0 +1,5 @@
+set terminal postscript eps enhanced color solid
+set output "ResultF4.ps"
+set datafile separator ' '
+set grid xtics ytics
+plot "Result.txt" using 4:8 title "Y_3-Y_2-Y_1" with lines

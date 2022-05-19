@@ -1,0 +1,6 @@
+#!/bin/bash
+exec gnuplot "plot.ptl" &
+exec gnuplot "plot_fase1.ptl" &
+exec gnuplot "plot_fase2.ptl" &
+exec gnuplot "plot_fase3.ptl" &
+exec gnuplot "plot_fase4.ptl"
