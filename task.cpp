@@ -13,7 +13,7 @@ const int N = 3; // number of equations
 // M    - input : parameter
 // D     - input : parameter
 // FRight - output : array of right part
-double* F(double* Y, double M, double D) {
+double* F(double* Y, double M, double D) {  //EDIT1
     double* FRight = new double[N];
     FRight[0] = (Y[0] - D/2*Y[1]+Y[1]*(Y[2]+Y[0]*Y[0]));
     FRight[1] = (D/2*Y[0]+Y[1]+Y[0]*(3*Y[2]-Y[0]*Y[0]));
@@ -90,8 +90,8 @@ int main()
         cout << "Oops! Couldn't open the file, bro... :с" << endl;
     }
 
-    // setting the initial conditions
-    Y[0] = sqrt(calcRoot(M, D))+ eps; 
+    // setting the initial conditions  //EDIT2 стационарные точки
+    Y[0] = sqrt(calcRoot(M, D))+ eps;  
     cout << Y[0] << endl;
     Y[1] = (-M)/sqrt(calcRoot(M, D)) + eps;
     cout << Y[1] << endl;
